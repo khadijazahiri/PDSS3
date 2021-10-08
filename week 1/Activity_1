@@ -1,0 +1,54 @@
+#Exercice 1
+#this is a smiling robot
+plot(x = 1, y = 1, type = 'n',
+     xlim = c(-4, 4), ylim = c(-4, 4), pch=11)
+points(x = -1, y = 1, pch = 19, col = "red")
+points(x = 1, y = 1, pch = 19, col = "red")
+segments(x0 = -1, y0 = -1, x1 = 1, y1 = -1)
+segments(x0 = -1, y0 = -1, x1 = -1, y1 = -0.5)
+segments(x0 = -1, y0 = -0.5, x1 = 1, y1 = -0.5)
+segments(x0 = 1, y0 = -0.5, x1 = 1, y1 = -1)
+segments(x0 = -0.5, y0 = -0.5, x1 = -0.5, y1 = -1)
+segments(x0 = 0, y0 = -0.5, x1 = 0, y1 = -1)
+segments(x0 = 0.5, y0 = -0.5, x1 = 0.5, y1 = -1)
+points(x = 1, y = 1, pch = 19, col = "red")
+segments(x0 = -2, y0 = 2, x1 = -2, y1 = -2)
+segments(x0 = -2, y0 = -2, x1 = 2, y1 = -2)
+segments(x0 = 2, y0 = -2, x1 = 2, y1 = 2)
+segments(x0 = -2, y0 = 2, x1 = 2, y1 = 2)
+
+
+
+#exercice 3
+
+x_values <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+mean_x <- mean(x_values)
+mean_x
+
+# Exercice 4
+x <- c(2, 3, 4, '4')
+x <- as.numeric(x)
+mean(x)
+
+#Exercice 5 
+#first we have to change the working directory to the one where 'nettle_1999_climate.csv' file exist
+nettle <- read.csv('nettle_1999_climate.csv')
+nettle[nettle$Country == 'Yemen', ]
+
+#Exercice 6
+
+head(nettle)
+
+#Exercise 7
+
+nettle[2, 5]
+nettle[1:4, ]
+nettle[1:4, 1:2]
+nettle[nettle$Country == 'Bangladesh', ]
+nettle[nettle$Country == 'Bangladesh', 5]
+nettle[nettle$Country == 'Bangladesh', ] [, 5]
+nettle[nettle$Country == 'Bangladesh', ] $Langs
+nettle[nettle$Country == 'Bangladesh', 'Langs']
+nettle[1:4, ] $Langs[2]
+nettle[1:4, c('Country', 'Langs')]
+head(nettle[,])
